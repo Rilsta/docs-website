@@ -6,9 +6,9 @@ tags:
   - Logs in context for PHP
 metaDescription: A description of the New Relic's logs in context configuration process for the PHP agent.
 redirects:
-  - /docs/log-management/new-relic-logs/enable-logs-context/enable-logs-context-php
-  - /docs/log-management/enable-logs/logs-context-php/configure-logs-context-php
-  - /docs/log-management/enable-log-monitoring-new-relic/logs-context-php/configure-logs-context-php
+  - /docs/logs/new-relic-logs/enable-logs-context/enable-logs-context-php
+  - /docs/logs/enable-logs/logs-context-php/configure-logs-context-php
+  - /docs/logs/enable-log-monitoring-new-relic/logs-context-php/configure-logs-context-php
 ---
 
 Logs in context for the PHP agent connects your logs and APM data in New Relic, giving full context to high-level events and providing high value data to specific log lines. Read on to learn how to configure logs in context and enrich your log data.
@@ -19,7 +19,7 @@ To use log management with the PHP agent, ensure your configuration meets the fo
 
 * PHP agent 9.13.0.270 or higher: [Install](/docs/agents/php-agent/installation/php-agent-installation-overview) or [update](/docs/agents/php-agent/installation/update-php-agent)
 * [Monolog](https://github.com/Seldaek/monolog) version 1 or 2
-* A compatible [log forwarding plugin](/docs/log-management/enable-logs/enable-logs/enable-new-relic-logs#enable-logs) if not using the built in New Relic Monolog Handler
+* A compatible [log forwarding plugin](/docs/logs/enable-logs/enable-logs/enable-new-relic-logs#enable-logs) if not using the built in New Relic Monolog Handler
 
 ## Configure logs in context with log management [#configure-logs]
 
@@ -71,7 +71,7 @@ $log->pushHandler(new BufferHandler(new Handler));
 
 ### Other logging tools
 
-If you use Monolog to send logs to a [compatible logging tool](https://docs.newrelic.com/docs/log-management/enable-logs/enable-logs/enable-new-relic-logs#enable-logs), and have already configured that tool to send logs to New Relic Logs, then you may prefer to use the `Processor` and `Formatter` to solely use that tool, instead of incurring the additional overhead of sending logs directly to New Relic with the `Handler`.
+If you use Monolog to send logs to a [compatible logging tool](https://docs.newrelic.com/docs/logs/enable-logs/enable-logs/enable-new-relic-logs#enable-logs), and have already configured that tool to send logs to New Relic Logs, then you may prefer to use the `Processor` and `Formatter` to solely use that tool, instead of incurring the additional overhead of sending logs directly to New Relic with the `Handler`.
 
 You will need to be using a handler that supports the `setFormatter()` method, and your logging tool must be able to ingest JSON logs.
 
@@ -94,7 +94,7 @@ $log->pushHandler($handler);
 
 ## Check for logging data [#check-data-php]
 
-If you have configured your logging as described above, run your application locally, ensure one or more log records are created, and check the New Relic [Logs UI](/docs/log-management/new-relic-logs/ui-data/explore-your-data-new-relic-logs-ui). You can find them using a query like this:
+If you have configured your logging as described above, run your application locally, ensure one or more log records are created, and check the New Relic [Logs UI](/docs/logs/new-relic-logs/ui-data/explore-your-data-new-relic-logs-ui). You can find them using a query like this:
 
 ```
 service.name:"your_app_name" has:trace.id

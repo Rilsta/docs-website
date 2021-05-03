@@ -7,10 +7,10 @@ tags:
 metaDescription: 'A description of the Logback logging extension for Java contextual logging, and how to configure it.'
 redirects:
   - /docs/enable-logs-context-logback
-  - /docs/log-management/new-relic-logs/enable-logs-context/enable-logs-context-logback
-  - /docs/log-management/enable-logs/logs-context-java/configure-logs-context-logback
-  - /docs/log-management/enable-logs/configure-logs-context/java-configure-logback
-  - /docs/log-management/enable-log-monitoring-new-relic/logs-context-java/java-configure-logback
+  - /docs/logs/new-relic-logs/enable-logs-context/enable-logs-context-logback
+  - /docs/logs/enable-logs/logs-context-java/configure-logs-context-logback
+  - /docs/logs/enable-logs/configure-logs-context/java-configure-logback
+  - /docs/logs/enable-log-monitoring-new-relic/logs-context-java/java-configure-logback
 ---
 
 New Relic offers a [Logback](https://logback.qos.ch/documentation.html) extension for [log management](https://docs.newrelic.com/docs/introduction-new-relic-logs), allowing you link to your log data with related data across the rest of the New Relic platform. This document explains how to configure logs in context and start getting log data. The [code](https://github.com/newrelic/java-log-extensions/tree/main/logback) and an [example application](https://github.com/newrelic/java-log-extensions/tree/main/examples/logback-app) are available on GitHub.
@@ -26,14 +26,14 @@ To use New Relic logs in context with Logback, ensure your configuration meets t
 
 To configure New Relic logs in context with Logback:
 
-1. [Enable log management](/docs/introduction-new-relic-logs) with a compatible [log forwarding plugin](/docs/log-management/enable-logs/enable-logs/enable-new-relic-logs#enable-logs).
+1. [Enable log management](/docs/introduction-new-relic-logs) with a compatible [log forwarding plugin](/docs/logs/enable-logs/enable-logs/enable-new-relic-logs#enable-logs).
 2. [Install or update the Java agent](#java-extension).
 3. [Configure the Logback extension](#enable-logs-logback).
 4. [Check for logging data.](#test-extension-java)
 
 ## Enable log management [#enable-logs]
 
-Confirm that you have [log management](/docs/introduction-new-relic-logs) enabled, with a compatible [log forwarding plugin](/docs/log-management/enable-logs/enable-logs/enable-new-relic-logs#enable-logs) installed to send your application logs to New Relic.
+Confirm that you have [log management](/docs/introduction-new-relic-logs) enabled, with a compatible [log forwarding plugin](/docs/logs/enable-logs/enable-logs/enable-new-relic-logs#enable-logs) installed to send your application logs to New Relic.
 
 ## Install or update the Java agent [#java-extension]
 

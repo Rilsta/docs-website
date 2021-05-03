@@ -6,11 +6,11 @@ tags:
   - UI and data
 metaDescription: How New Relic uses parsing and how to send customized log data.
 redirects:
-  - /docs/log-management/new-relic-logs/ui-data/customizing-log-data
-  - /docs/log-management/new-relic-logs/ui-data/customize-logs-using-parsing
-  - /docs/log-management/new-relic-logs/ui-data/new-relic-logs-parsing-built-rules-custom-parsing
-  - /docs/log-management/log-management/ui-data/new-relic-logs-parsing-built-rules-custom-parsing
-  - /docs/log-management/log-management/ui-data/logs-parsing-built-rules-custom-parsing
+  - /docs/logs/new-relic-logs/ui-data/customizing-log-data
+  - /docs/logs/new-relic-logs/ui-data/customize-logs-using-parsing
+  - /docs/logs/new-relic-logs/ui-data/new-relic-logs-parsing-built-rules-custom-parsing
+  - /docs/logs/log-management/ui-data/new-relic-logs-parsing-built-rules-custom-parsing
+  - /docs/logs/log-management/ui-data/logs-parsing-built-rules-custom-parsing
 ---
 
 Parsing is the process of splitting unstructured log data into [attribute](/docs/using-new-relic/welcome-new-relic/get-started/glossary#attribute)/value pairs. You can use these attributes to facet or filter logs in useful ways. This in turn helps you build better charts and alerts.
@@ -170,7 +170,7 @@ Common log formats have well-established parsing rules already created for them.
 
 ### List of built-in rulesets [#rulesets]
 
-The following `logtype` attribute values map to a standard parsing rulesets. See [Built-in parsing rules](/docs/log-management/log-management/ui-data/built-log-parsing-rulesets) to learn what fields are parsed for each rules.
+The following `logtype` attribute values map to a standard parsing rulesets. See [Built-in parsing rules](/docs/logs/log-management/ui-data/built-log-parsing-rulesets) to learn what fields are parsed for each rules.
 
 <table>
   <thead>
@@ -188,7 +188,7 @@ The following `logtype` attribute values map to a standard parsing rulesets. See
   <tbody>
     <tr>
       <td>
-        [`alb`](/docs/log-management/log-management/ui-data/built-log-parsing-rulesets#application-load-balancer)
+        [`alb`](/docs/logs/log-management/ui-data/built-log-parsing-rulesets#application-load-balancer)
       </td>
 
       <td>
@@ -200,7 +200,7 @@ The following `logtype` attribute values map to a standard parsing rulesets. See
 
     <tr>
       <td>
-        [`apache`](/docs/log-management/log-management/ui-data/built-log-parsing-rulesets#apache)
+        [`apache`](/docs/logs/log-management/ui-data/built-log-parsing-rulesets#apache)
       </td>
 
       <td>
@@ -212,7 +212,7 @@ The following `logtype` attribute values map to a standard parsing rulesets. See
 
     <tr>
       <td>
-        [`cloudfront-web`](/docs/log-management/log-management/ui-data/built-log-parsing-rulesets#cloudfront)
+        [`cloudfront-web`](/docs/logs/log-management/ui-data/built-log-parsing-rulesets#cloudfront)
       </td>
 
       <td>
@@ -224,7 +224,7 @@ The following `logtype` attribute values map to a standard parsing rulesets. See
 
     <tr>
       <td>
-        [`elb`](/docs/log-management/log-management/ui-data/built-log-parsing-rulesets#elastic-load-balancer)
+        [`elb`](/docs/logs/log-management/ui-data/built-log-parsing-rulesets#elastic-load-balancer)
       </td>
 
       <td>
@@ -248,7 +248,7 @@ The following `logtype` attribute values map to a standard parsing rulesets. See
 
     <tr>
       <td>
-        [`monit`](/docs/log-management/log-management/ui-data/built-log-parsing-rulesets#monit)
+        [`monit`](/docs/logs/log-management/ui-data/built-log-parsing-rulesets#monit)
       </td>
 
       <td>
@@ -260,7 +260,7 @@ The following `logtype` attribute values map to a standard parsing rulesets. See
 
     <tr>
       <td>
-        [`mysql-error`](https://docs.newrelic.com/docs/log-management/log-management/ui-data/built-log-parsing-rulesets#mysql-error)
+        [`mysql-error`](https://docs.newrelic.com/docs/logs/log-management/ui-data/built-log-parsing-rulesets#mysql-error)
       </td>
 
       <td>
@@ -272,7 +272,7 @@ The following `logtype` attribute values map to a standard parsing rulesets. See
 
     <tr>
       <td>
-        [`nginx`](/docs/log-management/log-management/ui-data/built-log-parsing-rulesets#nginx)
+        [`nginx`](/docs/logs/log-management/ui-data/built-log-parsing-rulesets#nginx)
       </td>
 
       <td>
@@ -284,7 +284,7 @@ The following `logtype` attribute values map to a standard parsing rulesets. See
 
     <tr>
       <td>
-        [`nginx-error`](/docs/log-management/log-management/ui-data/built-log-parsing-rulesets#nginx-error)
+        [`nginx-error`](/docs/logs/log-management/ui-data/built-log-parsing-rulesets#nginx-error)
       </td>
 
       <td>
@@ -296,7 +296,7 @@ The following `logtype` attribute values map to a standard parsing rulesets. See
 
     <tr>
       <td>
-        [`route-53`](/docs/log-management/log-management/ui-data/built-log-parsing-rulesets#route-53)
+        [`route-53`](/docs/logs/log-management/ui-data/built-log-parsing-rulesets#route-53)
       </td>
 
       <td>
@@ -308,7 +308,7 @@ The following `logtype` attribute values map to a standard parsing rulesets. See
 
     <tr>
       <td>
-        [`syslog-rfc5424`](/docs/log-management/log-management/ui-data/built-log-parsing-rulesets#syslog-rfc5424)
+        [`syslog-rfc5424`](/docs/logs/log-management/ui-data/built-log-parsing-rulesets#syslog-rfc5424)
       </td>
 
       <td>
@@ -324,7 +324,7 @@ The following `logtype` attribute values map to a standard parsing rulesets. See
 
 When aggregating logs, it's important to provide metadata that makes it easy to organize, search, and parse those logs. One simple way of doing this is to add the attribute `logtype` to the log messages when they are shipped. [Built-in parsing rules](#built-in-rules) are applied by default to certain `logtype` values.
 
-Here are some examples of how to add `logtype` to logs sent by some of our [supported shipping methods](/docs/log-management/enable-new-relic-logs).
+Here are some examples of how to add `logtype` to logs sent by some of our [supported shipping methods](/docs/logs/enable-new-relic-logs).
 
 <CollapserGroup>
   <Collapser
@@ -332,7 +332,7 @@ Here are some examples of how to add `logtype` to logs sent by some of our [supp
     id="infrastructure-log-forwarder-example"
     title="New Relic infrastructure agent example"
   >
-    Add `logtype` as an [`attribute`](/docs/log-management/enable-log-management-new-relic/enable-log-monitoring-new-relic/forward-your-logs-using-infrastructure-agent#attributes). You must set the logtype for each named source.
+    Add `logtype` as an [`attribute`](/docs/logs/enable-log-management-new-relic/enable-log-monitoring-new-relic/forward-your-logs-using-infrastructure-agent#attributes). You must set the logtype for each named source.
 
     ```
     logs:
@@ -413,7 +413,7 @@ Here are some examples of how to add `logtype` to logs sent by some of our [supp
     id="api-example"
     title="Logs API example"
   >
-    You can add attributes to the JSON request sent to New Relic. In this example we add a `logtype` attribute of value `nginx` to trigger the built-in NGINX parsing rule. Learn more about using the [Logs API](https://docs.newrelic.com/docs/log-management/new-relic-logs/log-api/introduction-log-api).
+    You can add attributes to the JSON request sent to New Relic. In this example we add a `logtype` attribute of value `nginx` to trigger the built-in NGINX parsing rule. Learn more about using the [Logs API](https://docs.newrelic.com/docs/logs/new-relic-logs/log-api/introduction-log-api).
 
     ```
     POST /log/v1 HTTP/1.1

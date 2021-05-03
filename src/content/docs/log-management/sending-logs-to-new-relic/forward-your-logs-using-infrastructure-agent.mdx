@@ -6,9 +6,9 @@ tags:
   - Enable log monitoring in New Relic
 metaDescription: How to forward your logs to New Relic using our infrastructure monitoring agent.
 redirects:
-  - /docs/log-management/enable-new-relic-logs/1-enable-logs/forward-your-logs-using-new-relic-infrastructure-agent
-  - /docs/log-management/enable-new-relic-logs/1-enable-logs/forward-your-logs-using-new-relic-infrastructure
-  - /docs/log-management/enable-log-monitoring-new-relic/enable-log-monitoring-new-relic/forward-your-logs-using-infrastructure-agent
+  - /docs/logs/enable-new-relic-logs/1-enable-logs/forward-your-logs-using-new-relic-infrastructure-agent
+  - /docs/logs/enable-new-relic-logs/1-enable-logs/forward-your-logs-using-new-relic-infrastructure
+  - /docs/logs/enable-log-monitoring-new-relic/enable-log-monitoring-new-relic/forward-your-logs-using-infrastructure-agent
 ---
 
 import amazonlinux from './images/amazonlinux.png'
@@ -259,7 +259,7 @@ Name of the log or logs.
 
 ### `attributes`
 
-List of [custom attributes](/docs/insights/insights-data-sources/custom-data/insights-custom-data-requirements-limits), as key-value pairs, that can be used to send additional data with the logs which you can then [query](/docs/using-new-relic/data/understand-data/query-new-relic-data). For example, you can [enable built-in parsing rules](/docs/log-management/log-management/ui-data/new-relic-logs-parsing-built-rules-custom-parsing) by setting the `logtype` attribute.
+List of [custom attributes](/docs/insights/insights-data-sources/custom-data/insights-custom-data-requirements-limits), as key-value pairs, that can be used to send additional data with the logs which you can then [query](/docs/using-new-relic/data/understand-data/query-new-relic-data). For example, you can [enable built-in parsing rules](/docs/logs/log-management/ui-data/new-relic-logs-parsing-built-rules-custom-parsing) by setting the `logtype` attribute.
 
 **Example:**
 
@@ -272,7 +272,7 @@ List of [custom attributes](/docs/insights/insights-data-sources/custom-data/ins
       separator: \t
     attributes: # You can add custom attributes to any source of logs
       <mark>tcpFormat: none</mark>
-      <mark><a href="/docs/log-management/log-management/ui-data/new-relic-logs-parsing-built-rules-custom-parsing">logtype</a>: nginx # See https://docs.newrelic.com/docs/log-management/log-management/ui-data/new-relic-logs-parsing-built-rules-custom-parsing</mark>
+      <mark><a href="/docs/logs/log-management/ui-data/new-relic-logs-parsing-built-rules-custom-parsing">logtype</a>: nginx # See https://docs.newrelic.com/docs/logs/log-management/ui-data/new-relic-logs-parsing-built-rules-custom-parsing</mark>
       <mark>someOtherAttribute: associatedValue</mark>
 ```
 
@@ -671,7 +671,7 @@ The infrastructure agent automatically inserts log attributes for your convenien
 
 ## Troubleshoot log forwarding [#troubleshoot]
 
-If no data appears after you enable log management, follow [standard troubleshooting procedures](/docs/log-management/new-relic-logs/troubleshooting/no-data-appears-logs).
+If no data appears after you enable log management, follow [standard troubleshooting procedures](/docs/logs/new-relic-logs/troubleshooting/no-data-appears-logs).
 
 ### No data appears when tailing a file [#no-data]
 
@@ -734,7 +734,7 @@ The log forwarding feature requires that the agent has permission to read the da
 * If you're using Unix domain socket files, make sure that the `nri-agent` user can access these files (please refer to the previous section) and that they have read and write permissions (`666`) so that other users than `nri-agent` can write to them.
 * If you're using IP sockets, ensure that the port that you are using is not a system reserved one (like port `80`, for example).
 
-If no data appears after you enable log management, follow [standard log management troubleshooting procedures](/docs/log-management/new-relic-logs/troubleshooting/no-data-appears-logs).
+If no data appears after you enable log management, follow [standard log management troubleshooting procedures](/docs/logs/new-relic-logs/troubleshooting/no-data-appears-logs).
 
 ### No data appears using infrastructure agent proxy
 
@@ -749,7 +749,7 @@ To solve this problem, check your `newrelic-infra.yml` file, and ensure the `pro
 
 ### Send the agent's logs to New Relic [#agent-logs]
 
-The infrastructure agent can be configured to send its own logs to [New Relic](/docs/log-management/new-relic-logs/get-started/introduction-new-relic-logs). This can be useful for troubleshooting issues with log forwarding, the agent, or when contacting [support](https://support.newrelic.com/).
+The infrastructure agent can be configured to send its own logs to [New Relic](/docs/logs/new-relic-logs/get-started/introduction-new-relic-logs). This can be useful for troubleshooting issues with log forwarding, the agent, or when contacting [support](https://support.newrelic.com/).
 
 To forward the infrastructure agent logs to New Relic:
 
@@ -762,7 +762,7 @@ To forward the infrastructure agent logs to New Relic:
 3. **(Recommended):** Enable agent logging in JSON format to `log_format: json`.
 4. [Restart the agent](/docs/infrastructure/new-relic-infrastructure/configuration/start-stop-restart-check-infrastructure-agent-status) so that the new settings can be loaded.
 
-This configuration sets up the agent in troubleshooting mode, but the log forwarder (based on [Fluent Bit](https://fluentbit.io/)) will continue in a non-verbose mode. Sometimes you can have issues with the log forwarder itself. For example, there may be problems accessing a specific channel when shipping [Windows log events](/docs/log-management/enable-log-management-new-relic/enable-log-monitoring-new-relic/forward-your-logs-using-infrastructure-agent#winlog) or when accessing a particular log file.
+This configuration sets up the agent in troubleshooting mode, but the log forwarder (based on [Fluent Bit](https://fluentbit.io/)) will continue in a non-verbose mode. Sometimes you can have issues with the log forwarder itself. For example, there may be problems accessing a specific channel when shipping [Windows log events](/docs/logs/enable-log-management-new-relic/enable-log-monitoring-new-relic/forward-your-logs-using-infrastructure-agent#winlog) or when accessing a particular log file.
 
 In these situations, you can also enable the verbose mode for the log forwarder:
 
@@ -770,7 +770,7 @@ In these situations, you can also enable the verbose mode for the log forwarder:
 2. Add the following configuration option: `trace: ["log.fw"]`.
 
 <Callout variant="caution">
-  Check whether you are using the [`fluentbit`](/docs/log-management/enable-log-management-new-relic/enable-log-monitoring-new-relic/forward-your-logs-using-infrastructure-agent#fb) option. When setting `verbose: 3` **and** `trace: ["log.fw"]`, ensure that you don't define any `[OUTPUT]` section pointing to `stdout` in an external Fluent Bit configuration file,
+  Check whether you are using the [`fluentbit`](/docs/logs/enable-log-management-new-relic/enable-log-monitoring-new-relic/forward-your-logs-using-infrastructure-agent#fb) option. When setting `verbose: 3` **and** `trace: ["log.fw"]`, ensure that you don't define any `[OUTPUT]` section pointing to `stdout` in an external Fluent Bit configuration file,
 </Callout>
 
 ### Fluent Bit does not start with the infra-agent [#no-fb]
@@ -811,5 +811,5 @@ To solve the issue, install the [Microsoft Visual C++ Redistributable](https://s
 Now that you've enabled Logs, here are some potential next steps:
 
 * Explore your data using the [Logs UI](/docs/explore-your-data-new-relic-logs-ui).
-* [Configure your agent](/docs/log-management/new-relic-logs/enable-logs-context/enable-logs-context-apm-agents) to see contextual log data, such as [distributed tracing](/docs/understand-dependencies/distributed-tracing/get-started/introduction-distributed-tracing), stack traces, application logs, and more.
+* [Configure your agent](/docs/logs/new-relic-logs/enable-logs-context/enable-logs-context-apm-agents) to see contextual log data, such as [distributed tracing](/docs/understand-dependencies/distributed-tracing/get-started/introduction-distributed-tracing), stack traces, application logs, and more.
 * [Query your data](/docs/using-new-relic/data/understand-data/query-new-relic-data) and [create custom dashboards](/docs/dashboards/new-relic-one-dashboards/get-started/introduction-new-relic-one-dashboards) or [alerts](/docs/alerts/new-relic-alerts/configuring-alert-policies/create-edit-or-find-alert-policy).

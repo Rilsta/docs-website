@@ -8,17 +8,17 @@ metaDescription: Link your log data with related data across the rest of the New
 redirects:
   - /docs/enable-logs-context-logs
   - /docs/enable-apm-logs-context-logs
-  - /docs/log-management/new-relic-logs/enable-logs-context/enable-apm-logs-context-logs
-  - /docs/log-management/new-relic-logs/enable-logs-context/enable-logs-context-apm-agents
+  - /docs/logs/new-relic-logs/enable-logs-context/enable-apm-logs-context-logs
+  - /docs/logs/new-relic-logs/enable-logs-context/enable-logs-context-apm-agents
   - /node/36951
-  - /docs/log-management/enable-logs/configure-logs-context/configure-logs-context-apm-agents
-  - /docs/log-management/enable-log-monitoring-new-relic/configure-logs-context/configure-logs-context-apm-agents
-  - /docs/log-management/new-relic-logs/enable-logs-context
-  - /docs/log-management/new-relic-logs/apm-integration
-  - /docs/log-management/log-monitoring/apm-integration
-  - /docs/log-management/log-management/apm-integration
-  - /docs/log-management/new-relic-logs/enable-logs/2-configure-logs-context-apm-agents
-  - /docs/log-management/log-monitoring/enable-logs/configure-logs-context-apm-agents
+  - /docs/logs/enable-logs/configure-logs-context/configure-logs-context-apm-agents
+  - /docs/logs/enable-log-monitoring-new-relic/configure-logs-context/configure-logs-context-apm-agents
+  - /docs/logs/new-relic-logs/enable-logs-context
+  - /docs/logs/new-relic-logs/apm-integration
+  - /docs/logs/log-monitoring/apm-integration
+  - /docs/logs/log-management/apm-integration
+  - /docs/logs/new-relic-logs/enable-logs/2-configure-logs-context-apm-agents
+  - /docs/logs/log-monitoring/enable-logs/configure-logs-context-apm-agents
 ---
 
 Logs in context makes it easy to link to your log data with related data across the rest of the New Relic platform. For example, you can easily correlate log messages to a related error trace or distributed trace in [APM](/docs/apm/applications-menu/monitoring/apm-overview-page-view-transaction-apdex-usage-data). This is accomplished by appending trace IDs to the corresponding application logs, automatically filtering to those logs from the [errors](/docs/apm/applications-menu/error-analytics/error-analytics-explore-events-behind-errors) or [distributed trace](/docs/apm/distributed-tracing/ui-data/understand-use-distributed-tracing-data) UIs.
@@ -50,7 +50,7 @@ The following diagram shows the lifecycle of a log message, from enrichment with
 
 To configure APM logs in context for New Relic, ensure your configuration meets the following requirements:
 
-* [New Relic logs management](/docs/introduction-new-relic-logs) enabled, with a compatible [log forwarding plugin](/docs/log-management/enable-logs/enable-logs/enable-new-relic-logs#enable-logs) installed.
+* [New Relic logs management](/docs/introduction-new-relic-logs) enabled, with a compatible [log forwarding plugin](/docs/logs/enable-logs/enable-logs/enable-new-relic-logs#enable-logs) installed.
 * Ability to update to a supported version of the APM agent, and ability to [enable distributed tracing](https://docs.newrelic.com/docs/understand-dependencies/distributed-tracing/enable-configure/enable-distributed-tracing) for your agent:
   * C SDK: n/a
   * [Go agent](/docs/agents/go-agent/get-started/go-agent-compatibility-requirements) version 2.12 or higher
@@ -115,7 +115,7 @@ Choose your APM agent to see specific instructions on how to configure APM logs 
 
     <tr>
       <td>
-        [.NET agent](/docs/log-management/new-relic-logs/enable-logs-context/enable-logs-context-net)
+        [.NET agent](/docs/logs/new-relic-logs/enable-logs-context/enable-logs-context-net)
       </td>
 
       <td>
@@ -127,7 +127,7 @@ Choose your APM agent to see specific instructions on how to configure APM logs 
 
     <tr>
       <td>
-        [Node.js agent](/docs/log-management/new-relic-logs/enable-logs-context/enable-logs-context-nodejs)
+        [Node.js agent](/docs/logs/new-relic-logs/enable-logs-context/enable-logs-context-nodejs)
       </td>
 
       <td>
@@ -137,7 +137,7 @@ Choose your APM agent to see specific instructions on how to configure APM logs 
 
     <tr>
       <td>
-        [PHP agent](/docs/log-management/enable-logs/logs-context-php/configure-logs-context-php)
+        [PHP agent](/docs/logs/enable-logs/logs-context-php/configure-logs-context-php)
       </td>
 
       <td>
@@ -147,7 +147,7 @@ Choose your APM agent to see specific instructions on how to configure APM logs 
 
     <tr>
       <td>
-        [Python agent](/docs/log-management/new-relic-logs/enable-logs-context/enable-logs-context-python)
+        [Python agent](/docs/logs/new-relic-logs/enable-logs-context/enable-logs-context-python)
       </td>
 
       <td>
@@ -157,7 +157,7 @@ Choose your APM agent to see specific instructions on how to configure APM logs 
 
     <tr>
       <td>
-        [Ruby agent](/docs/log-management/new-relic-logs/enable-logs-context/enable-logs-context-ruby)
+        [Ruby agent](/docs/logs/new-relic-logs/enable-logs-context/enable-logs-context-ruby)
       </td>
 
       <td>
@@ -167,7 +167,7 @@ Choose your APM agent to see specific instructions on how to configure APM logs 
   </tbody>
 </table>
 
-For information on creating your own logging extension, see [logs in context API calls](/docs/log-management/new-relic-logs/apm-integration/apm-agent-apis-manual-logs-context-instrumentation).
+For information on creating your own logging extension, see [logs in context API calls](/docs/logs/new-relic-logs/apm-integration/apm-agent-apis-manual-logs-context-instrumentation).
 
 ## What's next? [#what-next]
 

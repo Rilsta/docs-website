@@ -7,9 +7,9 @@ tags:
 metaDescription: 'A description of the Log4j 1.x logging extension for Java logs in context, and how to configure it.'
 redirects:
   - /docs/enable-logs-context-log4j-1x
-  - /docs/log-management/new-relic-logs/enable-logs-context/enable-logs-context-log4j-1x
-  - /docs/log-management/enable-logs/logs-context-java/java-configure-log4j-1x
-  - /docs/log-management/enable-log-monitoring-new-relic/logs-context-java/java-configure-log4j-1x
+  - /docs/logs/new-relic-logs/enable-logs-context/enable-logs-context-log4j-1x
+  - /docs/logs/enable-logs/logs-context-java/java-configure-log4j-1x
+  - /docs/logs/enable-log-monitoring-new-relic/logs-context-java/java-configure-log4j-1x
 ---
 
 New Relic offers a [Log4j 1.x](https://logging.apache.org/log4j/1.2/) extension for [New Relic log management](https://docs.newrelic.com/docs/introduction-new-relic-logs), allowing you link to your log data with related data across the rest of the New Relic platform. This document explains how to configure logs in context and start getting log data. The [code](https://github.com/newrelic/java-log-extensions/tree/main/log4j1) and an [example application](https://github.com/newrelic/java-log-extensions/tree/main/examples/log4j1-app) are available on GitHub.
@@ -27,14 +27,14 @@ To use New Relic logs in context with Log4j 1.x, ensure your configuration meets
 
 To configure logs in context with Logs4j 1.x:
 
-1. [Enable log management](/docs/introduction-new-relic-logs) with a compatible [log forwarding plugin](/docs/log-management/enable-logs/enable-logs/enable-new-relic-logs#enable-logs).
+1. [Enable log management](/docs/introduction-new-relic-logs) with a compatible [log forwarding plugin](/docs/logs/enable-logs/enable-logs/enable-new-relic-logs#enable-logs).
 2. [Install or update the Java agent](#java-extension).
 3. [Configure the Log4j 1.x extension](#enable-logs-log4j1).
 4. [Check for logging data.](#test-extension-java)
 
 ## Enable log management [#enable-logs]
 
-Confirm that you have [log management](/docs/introduction-new-relic-logs) enabled, with a compatible [log forwarding plugin](/docs/log-management/enable-logs/enable-logs/enable-new-relic-logs#enable-logs) installed to send your application logs to New Relic.
+Confirm that you have [log management](/docs/introduction-new-relic-logs) enabled, with a compatible [log forwarding plugin](/docs/logs/enable-logs/enable-logs/enable-new-relic-logs#enable-logs) installed to send your application logs to New Relic.
 
 ## Install or update the Java agent [#java-extension]
 

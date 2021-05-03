@@ -6,21 +6,21 @@ tags:
   - Logs in context with agent APIs
 metaDescription: 'New Relic''s  log management: How to use APM agent APIs to manually set up your own logs in context solution.'
 redirects:
-  - /docs/log-management/new-relic-logs/apm-integration/apm-agent-apis-manual-logs-context-instrumentation
-  - /docs/log-management/new-relic-logs/apm-integration/decorating-logs-logs-context-using-apm-agent-apis
-  - /docs/log-management/new-relic-logs/apm-integration/annotating-logs-logs-context-using-apm-agent-apis
-  - /docs/log-management/new-relic-logs/apm-integration/annotate-logs-logs-context-using-apm-agent-apis
-  - /docs/log-management/enable-logs/logs-context-agent-apis/annotate-logs-logs-context-using-apm-agent-apis
-  - /docs/log-management/enable-log-monitoring-new-relic/logs-context-agent-apis/annotate-logs-logs-context-using-apm-agent-apis
+  - /docs/logs/new-relic-logs/apm-integration/apm-agent-apis-manual-logs-context-instrumentation
+  - /docs/logs/new-relic-logs/apm-integration/decorating-logs-logs-context-using-apm-agent-apis
+  - /docs/logs/new-relic-logs/apm-integration/annotating-logs-logs-context-using-apm-agent-apis
+  - /docs/logs/new-relic-logs/apm-integration/annotate-logs-logs-context-using-apm-agent-apis
+  - /docs/logs/enable-logs/logs-context-agent-apis/annotate-logs-logs-context-using-apm-agent-apis
+  - /docs/logs/enable-log-monitoring-new-relic/logs-context-agent-apis/annotate-logs-logs-context-using-apm-agent-apis
 ---
 
-If you use log management and APM, you can configure [logs in context](/docs/log-management/new-relic-logs/enable-logs-context/enable-logs-context-apm-agents) to correlate log data with other New Relic features.
+If you use log management and APM, you can configure [logs in context](/docs/logs/new-relic-logs/enable-logs-context/enable-logs-context-apm-agents) to correlate log data with other New Relic features.
 
-If you use a logging framework not covered by our existing [logs in context solutions](/docs/log-management/new-relic-logs/enable-logs-context), we provide a way for you to configure your logging libraries to achieve annotated logs necessary for logs in context.
+If you use a logging framework not covered by our existing [logs in context solutions](/docs/logs/new-relic-logs/enable-logs-context), we provide a way for you to configure your logging libraries to achieve annotated logs necessary for logs in context.
 
 ## APM agent trace metadata and linking metadata APIs [#apis]
 
-To get properly annotated logs for [logs in context](/docs/log-management/new-relic-logs/enable-logs-context/enable-logs-context-apm-agents), use APM agent API calls (listed below). These APIs pass metadata required for linking log data to other New Relic data. This metadata is referred to as **trace metadata** and **linking metadata**. For tips on using these, see [Resources for correct annotation](#tips).
+To get properly annotated logs for [logs in context](/docs/logs/new-relic-logs/enable-logs-context/enable-logs-context-apm-agents), use APM agent API calls (listed below). These APIs pass metadata required for linking log data to other New Relic data. This metadata is referred to as **trace metadata** and **linking metadata**. For tips on using these, see [Resources for correct annotation](#tips).
 
 APM agent APIs:
 
@@ -56,6 +56,6 @@ For more information on using the [trace metadata and linking metadata APIs](#ap
   * Java: [Log4j2 extension](https://github.com/newrelic/java-log-extensions/blob/master/log4j2/src/main/java/com/newrelic/logging/log4j2/NewRelicLayout.java)
   * .NET: [Serilog extension](https://github.com/newrelic/newrelic-logenricher-dotnet/tree/main/src/NewRelic.LogEnrichers.Serilog)
   * Node.js: [Winston extension](https://github.com/newrelic/newrelic-winston-logenricher-node/blob/master/lib/createFormatter.js)
-  * Python: see [Python agent logging configuration](/docs/log-management/new-relic-logs/enable-logs-context/enable-logs-context-python#configure-logging)
+  * Python: see [Python agent logging configuration](/docs/logs/new-relic-logs/enable-logs-context/enable-logs-context-python#configure-logging)
   * PHP: [Monolog extension](https://github.com/newrelic/newrelic-monolog-logenricher-php/blob/master/src/Formatter.php)
   * Ruby: [Logging extension](https://github.com/newrelic/rpm/blob/master/lib/new_relic/agent/logging.rb)

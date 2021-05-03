@@ -7,9 +7,9 @@ tags:
 metaDescription: A description of the New Relic Logs contextual logging configuration process for the Go agent.
 redirects:
   - /docs/enable-logs-context-go
-  - /docs/log-management/new-relic-logs/enable-logs-context/enable-logs-context-go
-  - /docs/log-management/enable-logs/logs-context-go/configure-logs-context-go
-  - /docs/log-management/enable-log-monitoring-new-relic/logs-context-go/configure-logs-context-go
+  - /docs/logs/new-relic-logs/enable-logs-context/enable-logs-context-go
+  - /docs/logs/enable-logs/logs-context-go/configure-logs-context-go
+  - /docs/logs/enable-log-monitoring-new-relic/logs-context-go/configure-logs-context-go
 ---
 
 Logs in context for the Go agent connects your logs and APM data in New Relic, giving full context to high-level events, as well as providing high value data to specific log lines. Read on to learn how to configure logs in context and enrich your log data.
@@ -25,7 +25,7 @@ To use log management with the Go agent, ensure your configuration meets the fol
 
 To configure New Relic logs in context with Go:
 
-1. [Enable log management](/docs/introduction-new-relic-logs) with a compatible [log forwarding plugin](https://docs.newrelic.com/docs/log-management/enable-logs/enable-logs/enable-new-relic-logs#enable-logs).
+1. [Enable log management](/docs/introduction-new-relic-logs) with a compatible [log forwarding plugin](https://docs.newrelic.com/docs/logs/enable-logs/enable-logs/enable-new-relic-logs#enable-logs).
 2. [Install or update the Go agent](#go-plugin).
 3. [Configure logs in context using the Logrus extension](#configure-plugin-go).
 4. [Optional: Configure](#instrument-plugin-go) the Logrus extension.
@@ -33,7 +33,7 @@ To configure New Relic logs in context with Go:
 
 ## Enable log management [#enable-logs]
 
-Confirm that you have [log management](/docs/introduction-new-relic-logs) enabled, with a compatible [log forwarding plugin](https://docs.newrelic.com/docs/log-management/enable-logs/enable-logs/enable-new-relic-logs#enable-logs) installed to send your application logs to New Relic.
+Confirm that you have [log management](/docs/introduction-new-relic-logs) enabled, with a compatible [log forwarding plugin](https://docs.newrelic.com/docs/logs/enable-logs/enable-logs/enable-new-relic-logs#enable-logs) installed to send your application logs to New Relic.
 
 ## Install or update the Go agent [#go-plugin]
 
